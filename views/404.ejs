@@ -1,0 +1,9 @@
+<%- include('partials/header', { title: 'Ошибка 404' }) %>
+
+<section class="error-page">
+    <h2>404 — <%= message %></h2>
+    <p>Запрошенный URL: <code><%= url %></code></p>
+    <a class="button" href="/courses">К списку курсов</a>
+</section>
+
+<%- include('partials/footer') %>

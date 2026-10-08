@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f5f8;
+    color: #253047;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-header {
+    padding: 22px 0;
+    background: #243b60;
+    color: white;
+}
+
+.site-header h1 {
+    margin: 0 0 14px;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+}
+
+main.container {
+    padding: 28px 0;
+    min-height: 65vh;
+}
+
+a {
+    color: #245ca4;
+}
+
+.page-heading, .actions, .filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.page-heading {
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+h2 {
+    margin-top: 0;
+    overflow-wrap: anywhere;
+}
+
+.page-heading h2 {
+    margin-bottom: 0;
+}
+
+.filters, .course-form, .course-details, .error-page, .empty-state {
+    padding: 24px;
+    background: white;
+    border: 1px solid #dce1e9;
+    border-radius: 8px;
+}
+
+.filters {
+    align-items: flex-end;
+}
+
+.filters .field:first-child {
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aab5c5;
+    border-radius: 4px;
+    font: inherit;
+    background: white;
+    color: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button, .button {
+    display: inline-block;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #245ca4;
+    color: white;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    filter: brightness(0.9);
+}
+
+:focus-visible {
+    outline: 3px solid #cd8a11;
+    outline-offset: 3px;
+}
+
+.view {
+    background: #256b57;
+}
+
+.edit {
+    background: #f0cf7a;
+    color: #46320a;
+}
+
+.delete {
+    background: #b5333d;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #dce1e9;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #dce1e9;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background: #e7edf5;
+}
+
+td .actions {
+    min-width: 130px;
+    gap: 7px;
+}
+
+td .button, td button {
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.course-form {
+    max-width: 700px;
+}
+
+.course-form input, .course-form textarea {
+    margin-bottom: 18px;
+}
+
+.errors {
+    max-width: 700px;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border: 1px solid #e0a4a8;
+    border-radius: 6px;
+    background: #fff0f1;
+    color: #8f2029;
+}
+
+.course-details {
+    margin-top: 18px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 14px;
+    overflow-wrap: anywhere;
+}
+
+.description {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.error-page code {
+    overflow-wrap: anywhere;
+}
+
+.site-footer {
+    padding: 22px 0;
+    border-top: 1px solid #dce1e9;
+    color: #526078;
+}
+
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 21px;
+    }
+
+    .filters .field {
+        width: 100%;
+    }
+
+    .filters, .course-form, .course-details {
+        padding: 16px;
+    }
+}

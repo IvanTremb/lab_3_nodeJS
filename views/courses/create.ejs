@@ -1,0 +1,37 @@
+<%- include('../partials/header', { title: 'Добавление курса' }) %>
+
+<h2>Добавление курса</h2>
+<% if (errors.length > 0) { %>
+    <div class="errors" role="alert">
+        <p>Проверьте введённые данные:</p>
+        <ul>
+            <% errors.forEach(error => { %>
+                <li><%= error %></li>
+            <% }); %>
+        </ul>
+    </div>
+<% } %>
+
+<form class="course-form" action="/courses" method="POST">
+    <label for="title">Название дисциплины</label>
+    <input id="title" name="title" value="<%= course.title || '' %>" required>
+
+    <label for="teacher">Преподаватель</label>
+    <input id="teacher" name="teacher" value="<%= course.teacher || '' %>" required>
+
+    <label for="credits">Количество кредитов</label>
+    <input id="credits" name="credits" type="number" step="any" min="0" value="<%= course.credits || '' %>" required>
+
+    <label for="semester">Семестр (от 1 до 8)</label>
+    <input id="semester" name="semester" type="number" min="1" max="8" step="1" value="<%= course.semester || '' %>" required>
+
+    <label for="description">Описание</label>
+    <textarea id="description" name="description" rows="5" required><%= course.description || '' %></textarea>
+
+    <div class="actions">
+        <button type="submit">Добавить курс</button>
+        <a href="/courses">Отмена</a>
+    </div>
+</form>
+
+<%- include('../partials/footer') %>
